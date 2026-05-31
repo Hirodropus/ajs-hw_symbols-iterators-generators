@@ -4,6 +4,8 @@ export default class Team {
   }
 
   *[Symbol.iterator]() {
-    yield* this.characters;
+    for (let i = 0; i < this.characters.length; i++) {
+      yield this.characters[i];
+    }
   }
 }
